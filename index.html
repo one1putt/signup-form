@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="logo">
@@ -12,7 +13,6 @@
             <img src="./images/odin-lined.png" alt="odin logo">
             <p>ODIN</p>
         </div>
-        <!-- <img src="./images/Leaves.jpg" alt="pic of Leaves"> -->
     </div>
     <div class="signup">
         <div class="header">
@@ -48,29 +48,6 @@
             <p>Already have an account? <a href="">Log In</a></p>
         </div>
     </div>
-    <script>
-        let error = document.querySelector('.password p')
-        let submitButton = document.querySelector('button')
-        let password = document.querySelector('#password')
-        let confirmPassword = document.querySelector('#c-password')
 
-        function addError() {
-            let passwordText = password.value
-            let confirmText = confirmPassword.value
-            if (passwordText != confirmText) {
-                error.textContent = '* Passwords do not match.'
-                password.style.borderColor = 'red'
-                confirmPassword.style.borderColor = 'red'
-                return
-            }
-            error.textContent = ''
-            password.style.borderColor = '#efe7eb'
-            confirmPassword.style.borderColor = '#efe7eb'
-        }
-
-        submitButton.addEventListener('click', addError)
-
-
-    </script>
 </body>
 </html>
