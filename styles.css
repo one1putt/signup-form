@@ -1,0 +1,172 @@
+/* defaults */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+/* body */
+body {
+    display: flex;
+}
+
+/* logo section */
+.logo {
+    /* background-image: url('./images/Leaves.jpg');
+    background-size: contain;
+    background-repeat: no-repeat; */
+    /* height: 100vh;
+    width: 30%; */
+    position: relative;
+    flex: 1;
+}
+
+@font-face {
+    font-family: odinFont;
+    src: url('./images/Norse-Bold.otf');
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+
+}
+
+.logo div {
+    position: absolute;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    padding: 10px;
+}
+
+.logo div img {
+    height: 100px;
+    width: auto;
+}
+
+.logo p {
+    font-family: odinFont;
+    font-size: 64px;
+    color: white;
+}
+
+/* signup section */
+/* header */
+.signup {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.header, .footer {
+    background-color: #efe7eb;
+    padding: 50px 0 50px 100px;
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header h2 {
+    max-width: 600px;
+    padding-bottom: 1rem;
+}
+
+/* sign-up */
+.signup-form {
+    background-color: white;
+    padding: 50px 0 100px 100px;
+    max-height: 340px;
+    flex-grow: 1;
+}
+
+.signup-form h1 {
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    justify-content: start;
+    align-content: flex-start;
+    height: 100%;
+}
+
+.left, .right {
+    flex-direction: column;
+    display: flex;
+}
+
+input {
+    width: 250px;
+    height: 1.5rem;
+    margin-right: 100px;
+    border: 1px solid #efe7eb;
+    border-radius: 3px;
+}
+
+input:not(.password input) {
+    margin-bottom: 25px;
+}
+
+input:focus-visible, input:focus {
+    border-color: blue;
+    outline: none;
+    box-shadow: 2px 2px 5px grey;
+}
+
+label {
+    font-size: 0.75rem;
+}
+
+/* footer */
+.footer {
+    /* height: calc(100vh - ); */
+    padding: 50px 0 50px 100px;
+    height: auto;
+}
+
+button {
+    background-color: #596D48;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    border: 0 solid white;
+    margin-bottom: 25px;
+    outline: none;
+    box-shadow: 2px 2px 5px black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+}
+
+.password p {
+    color: red;
+    font-size: .75rem;
+}

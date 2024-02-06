@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="logo">
+        <div>
+            <img src="./images/odin-lined.png" alt="odin logo">
+            <p>ODIN</p>
+        </div>
+        <img src="./images/Leaves.jpg" alt="pic of Leaves">
+    </div>
+    <div class="signup">
+        <div class="header">
+            <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h2>
+            <h2>You <em>know</em> you want to.</h2>
+        </div>
+        <div class="signup-form">
+            <h1>Let's Do This!</h1>
+            <form action="" method="post">
+                <div class="left">
+                    <label for="first">FIRST NAME</label>
+                    <input id="first" type="text" name="first" required>
+                    <label for="email">EMAIL</label>
+                    <input id="email" type="email" name="email" required>
+                    <div class="password">
+                        <label for="password">PASSWORD</label>
+                        <input id="password" class="error" type="password" name="password" required>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <label for="last">LAST NAME</label>
+                    <input id="last" type="text" name="last" required>
+                    <label for="phone">PHONE NUMBER</label>
+                    <input id="phone" type="tel" name="phone" required>
+                    <label for="c-password">CONFIRM PASSWORD</label>
+                    <input id="c-password" class="error" type="password" name="c-password" required>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="">Log In</a></p>
+        </div>
+    </div>
+    <script>
+        let error = document.querySelector('.password p')
+        let submitButton = document.querySelector('button')
+        let password = document.querySelector('#password')
+        let confirmPassword = document.querySelector('#c-password')
+
+        function addError() {
+            let passwordText = password.value
+            let confirmText = confirmPassword.value
+            if (passwordText != confirmText) {
+                error.textContent = '* Passwords do not match.'
+                password.style.borderColor = 'red'
+                confirmPassword.style.borderColor = 'red'
+                return
+            }
+            error.textContent = ''
+            password.style.borderColor = '#efe7eb'
+            confirmPassword.style.borderColor = '#efe7eb'
+        }
+
+        submitButton.addEventListener('click', addError)
+
+
+    </script>
+</body>
+</html>
