@@ -18,6 +18,8 @@ body {
 /* body */
 body {
     display: flex;
+    background-image: url(./images/Leaves.jpg);
+    background-size: contain;
 }
 
 /* logo section */
